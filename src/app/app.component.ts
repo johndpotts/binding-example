@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'binding-example';
+
+  title = 'Game Control';
+  odd = [];
+  even = [];
+
+
+  getEvens = function($event) {
+    const num: number = $event.num;
+    (num % 2 === 0) ? this.even.push(num) : this.odd.push(num);
+    };
 }
